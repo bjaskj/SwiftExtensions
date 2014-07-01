@@ -1,5 +1,15 @@
 extension String {
-    func containsString(value: String) -> Bool {
-        return self.bridgeToObjectiveC().containsString(value)
+    func containsCharacter(str:Character) -> Bool {
+        if countElements(self) == 0 {
+            return false
+        }
+        
+        for c in self {
+            if c == str {
+                return true
+            }
+        }
+    
+        return false
     }
 }
